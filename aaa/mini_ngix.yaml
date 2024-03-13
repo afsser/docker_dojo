@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  minishell:
+    image: ubuntu:latest
+    command: /bin/bash -c "apt-get update && apt-get install -y build-essential gcc make cmake git libreadline-dev libncurses5-dev curl inetutils-ping && mkdir /app && cd /app && git clone https://github.com/vinicius-f-pereira/minishell.git && cd minishell && make && ./minishell"
+    expose:
+      - "1080"

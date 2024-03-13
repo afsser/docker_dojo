@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  minishell-app:
+    build:
+      context: .
+    ports:
+      - "1080:1080"
+    command: ["./minishell"]
